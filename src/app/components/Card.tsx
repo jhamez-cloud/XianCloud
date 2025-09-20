@@ -5,13 +5,11 @@ interface Props {
     children: React.ReactNode;
     type: string;
     cost: number;
-    onSelect?: () => void;
 }
 
 const Card = (props: Props) => {
     return (
         <figure
-            onClick={props.onSelect}
             className={`col-span-1 h-full rounded-xl flex flex-col justify-between px-3 sm:px-4 py-4 sm:py-6 cursor-pointer transition-shadow hover:shadow-lg`}
             style={{
                 boxShadow: "0 4px 15px rgba(0,0,0,0.15)",

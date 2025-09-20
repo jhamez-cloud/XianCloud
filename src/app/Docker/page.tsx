@@ -8,8 +8,6 @@ import Footer from "@/app/components/Footer";
 
 const Page = () => {
 
-    const [selectedCard, setSelectedCard] = useState<number | null>(null);
-
     return (
         <div className={`w-full min-h-screen bg-white px-4 sm:px-8 md:px-16 lg:px-28 pt-4 sm:pt-8 pb-12`}>
             <NavBar/>
@@ -126,7 +124,6 @@ const Page = () => {
                     ].map((item, index) => (
                         <Card
                             key={index}
-                            onSelect={() => setSelectedCard(index)}
                             type={item.type}
                             image={item.img}
                             cost={item.cost}
